@@ -1,0 +1,351 @@
+Script started on 2024-10-28 11:17:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/44" COLUMNS="117" LINES="23"]
+[?2004hbash-5.1$ /script.txt
+[?2004lbash: /script.txt: No such file or directory
+[?2004hbash-5.1$ /script.txt
+[?2004lbash: /script.txt: No such file or directory
+[?2004hbash-5.1$ ;[Kls
+[?2004lconv_bend.csv  geom_bend.txt   log_bend.txt	   out_final_bend.bin  script.txt  stopit      typescript
+g9.raw	       input_bend.txt  out_coord_bend.bin  out_guess_bend.bin  sod.raw	   sudhoo.raw
+[?2004hbash-5.1$ script.txt
+[?2004lbash: script.txt: command not found
+[?2004hbash-5.1$ /script.txt
+[?2004lbash: /script.txt: No such file or directory
+[?2004hbash-5.1$ [7m/homes/pc693/4A2/4a2/Cases[27m[C[C[C[C[C[C[C[C[C[C/homes/pc693/4A2/4a2/Cases[C/script.te[Kxt
+[?2004lbash: /homes/pc693/4A2/4a2/Cases/script.txt: Permission denied
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lbash: /homes/pc693/4A2/4a2/Cases/script.txt: Permission denied
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+/homes/pc693/4A2/4a2/Cases/script.txt: line 4: /homes/pc693/4A2/4a2/Code/solver.x: No such file or directory
+
+[?2004hbash-5.1$ 
+[?2004l[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+/homes/pc693/4A2/4a2/Cases/script.txt: line 4: /homes/pc693/4A2/4a2/Code/solver.x: No such file or directory
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+/homes/pc693/4A2/4a2/Cases/script.txt: line 4: /homes/pc693/4A2/4a2/Code/solver.x: No such file or directory
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+/homes/pc693/4A2/4a2/Cases/script.txt: line 4: /homes/pc693/4A2/4a2/Code/solver.x: No such file or directory
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt[C[C[C[C[C[C[C[C[C[C[Cscript.txt[K[1Pscript.txt/script.txthomes/pc693/4A2/4a2/Cases/script.txt[C[C[C[C[C[C[C[C[C[C[K/homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_timestep.f90 -o set_timestep.o
+gfortran -fcheck=all -g -c set_secondary.f90 -o set_secondary.o
+gfortran -fcheck=all -g -c apply_bconds.f90 -o apply_bconds.o
+gfortran -fcheck=all -g -c euler_iteration.f90 -o euler_iteration.o
+gfortran -fcheck=all -g -c check_conv.f90 -o check_conv.o
+gfortran -fcheck=all -g -c check_stop.f90 -o check_stop.o
+gfortran  -fcheck=all -g -o solver.x  types.o routines.o flux_stencil.o smooth_stencil.o solver.o read_settings.o allocate_arrays.o read_geom.o generate_mesh.o read_mesh.o calc_areas.o write_output.o check_mesh.o flow_guess.o set_timestep.o set_secondary.o apply_bconds.o euler_iteration.o check_conv.o check_stop.o  
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+[?2004hbash-5.1$ /homes/pc693/4A2/4a2/Cases/script.txt
+[?2004lrm -fr *.o solver.x Save*
+gfortran -fcheck=all -g -c types.f90 -o types.o
+gfortran -fcheck=all -g -c routines.f90 -o routines.o
+gfortran -fcheck=all -g -c flux_stencil.f90 -o flux_stencil.o
+gfortran -fcheck=all -g -c smooth_stencil.f90 -o smooth_stencil.o
+gfortran -fcheck=all -g -c solver.f90 -o solver.o
+gfortran -fcheck=all -g -c read_settings.f90 -o read_settings.o
+gfortran -fcheck=all -g -c allocate_arrays.f90 -o allocate_arrays.o
+gfortran -fcheck=all -g -c read_geom.f90 -o read_geom.o
+gfortran -fcheck=all -g -c generate_mesh.f90 -o generate_mesh.o
+gfortran -fcheck=all -g -c read_mesh.f90 -o read_mesh.o
+gfortran -fcheck=all -g -c calc_areas.f90 -o calc_areas.o
+gfortran -fcheck=all -g -c write_output.f90 -o write_output.o
+gfortran -fcheck=all -g -c check_mesh.f90 -o check_mesh.o
+gfortran -fcheck=all -g -c flow_guess.f90 -o flow_guess.o
+gfortran -fcheck=all -g -c set_

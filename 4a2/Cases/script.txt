@@ -1,0 +1,8 @@
+cd ../Code
+make clean
+make
+cd ../Cases
+/homes/pc693/4A2/4a2/Code/solver.x < input_bend.txt > log_bend.txt
+time ../Code/solver.x < input_bend.txt
+python ../Code/plot_conv.py bend
+python ../Code/plot_contours.py bend
