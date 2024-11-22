@@ -13,8 +13,8 @@
 !         Gas Properties
           real :: rgas, gam, cp, cv, fgam
 
-!         Timestepping, smoothing and other run options
-          real ::  cfl, sfac, dt, d_max, d_avg
+!         Timestepping, smoothing and other run options, d_total for R-K
+          real ::  cfl, sfac, dt, d_max, d_avg, dt_total
           integer :: nsteps, nstep
 
 !         Reference values of the primary flow variables
@@ -81,6 +81,10 @@
 !         Primary variables at nodes
           real, dimension(:,:), allocatable :: ro, roe, rovx, rovy
 
+!         Primary variable starting points for Runge-Kutta schemes 
+          real, dimension(:,:), allocatable :: ro_start, roe_start, &
+               rovx_start, rovy_start
+          
 !         Variables to hold cell increments
           real, dimension(:,:), allocatable :: dro, droe, drovx, drovy
 

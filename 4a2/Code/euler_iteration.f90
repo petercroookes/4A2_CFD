@@ -57,6 +57,9 @@
 
       call sum_fluxes(av, mass_i, mass_j, g%area, g%ro, g%dro)
 
+      ! Call sum_fluxes for ro_start as well
+      call sum_fluxes(av, mass_i, mass_j, g%area, g%ro_start, g%dro)
+
       ! Check if any NaN values in dro
       if (any(ieee_is_nan(g%dro))) then
          print *, "NaN detected in dro"
@@ -74,6 +77,9 @@
 !     INSERT
 
       call sum_fluxes(av, flux_i, flux_j, g%area, g%roe, g%droe)
+
+      ! Call sum_fluxes for roe_start as well
+      call sum_fluxes(av, flux_i, flux_j, g%area, g%roe_start, g%droe)
 
       ! Check if any NaN values in droe
       if (any(ieee_is_nan(g%droe))) then
@@ -93,6 +99,9 @@
 
       call sum_fluxes(av, flux_i, flux_j, g%area, g%rovx, g%drovx)
 
+      ! Call sum_fluxes for rovx_start as well
+      call sum_fluxes(av, flux_i, flux_j, g%area, g%rovx_start, g%drovx)
+      
       ! Check if any NaN values in drovx or drovy
       if (any(ieee_is_nan(g%drovx))) then
          print *, "NaN detected in dro"
@@ -114,7 +123,10 @@
 !     INSERT
 
       call sum_fluxes(av, flux_i, flux_j, g%area, g%rovy, g%drovy)
-      
+
+      ! Call sum_fluxes for rovx_start as well
+      call sum_fluxes(av, flux_i, flux_j, g%area, g%rovy_start, g%drovy)
+
 !     Add artificial viscosity by smoothing all of the primary flow variables
       call smooth_array(av,g%ro)
       call smooth_array(av,g%roe)

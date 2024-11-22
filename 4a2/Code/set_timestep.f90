@@ -29,7 +29,7 @@
 !     Calculate the timestep using the CFL number and store it in "av%dt"
 !     INSERT
 
-      av%dt = av%cfl * g%l_min / v_max
+      av%dt_total = av%cfl * g%l_min / v_max
       
 !     Print the calculated timestep and some intermediate values
 !     INSERT

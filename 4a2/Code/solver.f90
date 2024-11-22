@@ -23,6 +23,7 @@
       type(t_grid) :: g
       real :: d_max = 1, d_avg = 1
       integer :: nstep, nconv = 5, ncheck = 5
+      integer :: nrkut, nrkuts
 
 !     Read in the data on the run settings
       call read_settings(av,bcs)
@@ -88,38 +89,55 @@
 !     Start the time stepping do loop for "nsteps". This is now the heart of the
 !     program, you should aim to program anything inside this loop to operate as
 !     efficiently as you can.
+
+      ! Runge-Kutta implementation with nrkuts = 4
+      nrkuts = 4
       do nstep = 1, av%nsteps
+         av%nstep = nstep
+         g%ro_start = g%ro; g%roe_start = g%roe
+         g%rovx_start = g%rovx; g%rovy_start = g%rovy
+         do nrkut = 1, nrkuts
+            av%dt = av%dt_total / (1 + nrkuts - nrkut)
+            call set_secondary(av,g)
+            call apply_bconds(av,g,bcs)
+            call euler_iteration(av,g)
+         end do
+      end do
+
+      
+      ! This is the original loop
+!      do nstep = 1, av%nsteps
 
 !         Update record of nstep to use in subroutines
-          av%nstep = nstep
+!          av%nstep = nstep
 
 !         Calculate secondary flow variables used in conservation equations
-          call set_secondary(av,g)
+!          call set_secondary(av,g)
 
 !         Apply inlet and outlet values at the boundaries of the domain
-          call apply_bconds(av,g,bcs)
+!          call apply_bconds(av,g,bcs)
 
 !         Perform the timestep to update the primary flow variables
-          call euler_iteration(av,g)
+!          call euler_iteration(av,g)
 
 !         Write out summary every "nconv" steps and update "davg" and "dmax" 
-          if(mod(av%nstep,nconv) == 0) then
-              call check_conv(av,g,d_avg,d_max)
-          end if
+!          if(mod(av%nstep,nconv) == 0) then
+!              call check_conv(av,g,d_avg,d_max)
+!          end if
 
 !         Check the solution hasn't diverged or a stop has been requested 
 !         every "ncheck" steps
-          if(mod(av%nstep,ncheck) == 0) then
-              call check_stop(av,g)
-          end if
+!          if(mod(av%nstep,ncheck) == 0) then
+!              call check_stop(av,g)
+!          end if
 
 !         Stop marching if converged to the desired tolerance "conlim"
-          if(d_max < av%d_max .and. d_avg < av%d_avg) then
-              write(6,*) 'Calculation converged in', nstep,'iterations'
-              exit
-          end if
+!          if(d_max < av%d_max .and. d_avg < av%d_avg) then
+!              write(6,*) 'Calculation converged in', nstep,'iterations'
+!              exit
+!          end if
 
-      end do
+!      end do
 
 !     Calculation finished, call "write_output" to write the final, not 
 !     necessarily converged flowfield
