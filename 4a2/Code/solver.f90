@@ -72,10 +72,9 @@
 !     Optional output call to inspect the initial guess of the flowfield
       call write_output(av,g,2)
 
-!     Set the length of the timestep, initially this is a constant based on a 
-!     conservative guess of the mach number
-      call set_timestep(av,g,bcs)
-
+!     Call set_secondary before first iteration
+      call set_secondary(av,g)
+      
 !     Open file to store the convergence history. This is human readable during
 !     a long run by using "tail -f conv_example.csv" in a terminal window
       open(unit=3,file='conv_' // av%casename // '.csv')
@@ -100,8 +99,10 @@
          av%nstep = nstep
          g%ro_start = g%ro; g%roe_start = g%roe
          g%rovx_start = g%rovx; g%rovy_start = g%rovy
+         ! Spatially varying timestep is now calculated every nstep = nrkuts
+         call set_timestep(av,g,bcs)
          do nrkut = 1, nrkuts
-            av%dt = av%dt_total / (1 + nrkuts - nrkut)
+            av%dt(:,:) = av%dt_total(:,:) / (1 + nrkuts - nrkut)
             call set_secondary(av,g)
             call apply_bconds(av,g,bcs)
             call euler_iteration(av,g)            

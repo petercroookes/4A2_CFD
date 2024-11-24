@@ -8,7 +8,7 @@
 !     Explicitly declare the required variables
       use types
       implicit none
-      type(t_appvars), intent(in) :: av
+      type(t_appvars), intent(inout) :: av
       type(t_grid), intent(inout) :: g
       type(t_bconds), intent(inout) :: bcs
       integer :: ni, nj
@@ -46,7 +46,12 @@
 !     Secondary variables stored at the nodes for convenience
       allocate(g%p(ni,nj),g%hstag(ni,nj),g%vx(ni,nj),g%vy(ni,nj))
 
+!     Allocate arrays for spatially varying timesteps with R-K implemented 
+      allocate(av%dt(ni-1,nj-1), av%dt_total(ni-1,nj-1))
 
+!     Allocate array for l_min after implementing spatially varying timesteps
+      allocate(g%l_min(ni-1,nj-1))
+      
       end subroutine allocate_arrays
 
 

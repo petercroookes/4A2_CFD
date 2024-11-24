@@ -34,7 +34,7 @@
       do i = 1, ni - 1
          do j = 1, nj - 1
             dcell(i,j) = (flux_i(i,j) + flux_j(i,j) - flux_i(i+1,j) - &
-                 flux_j(i,j+1)) * (av%dt/area(i,j))
+                 flux_j(i,j+1)) * (av%dt(i,j)/area(i,j))
          end do
       end do
       

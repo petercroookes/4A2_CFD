@@ -108,12 +108,34 @@
       end do
 
       ! Calculate minimum length and deallocate the lengths arrays
-      g%l_min = min(minval(lengths_i),minval(lengths_j))
+      ! Spatially varying timestep implemented:
+      
+      do j = 1, nj-2
+         do i = 1, ni-2
+            g%l_min(i,j) = min(lengths_i(i,j),lengths_i(i,j+1),&
+                 lengths_j(i,j), lengths_j(i+1,j))
+         end do
+      end do
+
+      do i = 1, ni-2
+         do j = nj-1, nj-1
+            g%l_min(i,j) = min(lengths_i(i,j),lengths_j(i,j),lengths_j(i+1,j))
+         end do
+      end do
+
+      do j = 1, nj-2
+         do i = ni-1, ni-1
+            g%l_min(i,j) = min(lengths_i(i,j),lengths_j(i,j),lengths_i(i,j+1))
+         end do
+      end do
+
+      g%l_min(ni-1,nj-1) = min(lengths_i(ni-1,nj-1),lengths_j(ni-1,nj-1))
+         
       deallocate(lengths_i, lengths_j)
       
 !     Print the overall minimum length size that has been calculated
       write(6,*) 'Calculated cell areas and facet lengths'
-      write(6,*) '  Overall minimum element size = ', g%l_min
+      write(6,*) '  Overall minimum element size = ', minval(g%l_min)
       write(6,*) 'First values of projected lengths:', g%lx_i(1,1), g%ly_i(1,1), &
            g%lx_j(1,1), g%ly_j(1,1)
       write(6,*) 'Shape of projected length arrays:', shape(g%lx_i), shape(g%ly_i), &

@@ -14,7 +14,9 @@
           real :: rgas, gam, cp, cv, fgam
 
 !         Timestepping, smoothing and other run options, d_total for R-K
-          real ::  cfl, sfac, dt, d_max, d_avg, dt_total
+          real ::  cfl, sfac, d_max, d_avg
+!         Implementation of spatially varying timestep 
+          real, dimension(:,:), allocatable :: dt, dt_total
           integer :: nsteps, nstep
 
 !         Reference values of the primary flow variables
@@ -76,7 +78,7 @@
 !         Mesh coordinate data in 2D matrices
           real, dimension(:,:), allocatable :: x, y, area, lx_i, ly_i, &
                lx_j, ly_j
-          real  ::  l_min
+          real, dimension(:,:), allocatable :: l_min
 
 !         Primary variables at nodes
           real, dimension(:,:), allocatable :: ro, roe, rovx, rovy
