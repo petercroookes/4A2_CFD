@@ -128,10 +128,10 @@
       call sum_fluxes(av, flux_i, flux_j, g%area, g%rovy_start, g%drovy)
 
 !     Add artificial viscosity by smoothing all of the primary flow variables
-      call smooth_array(av,g%ro)
-      call smooth_array(av,g%roe)
-      call smooth_array(av,g%rovx)
-      call smooth_array(av,g%rovy)
+      call smooth_array(av,g%ro,g%corr_ro)
+      call smooth_array(av,g%roe,g%corr_roe)
+      call smooth_array(av,g%rovx,g%corr_rovx)
+      call smooth_array(av,g%rovy,g%corr_rovy)
 
       end subroutine euler_iteration
 

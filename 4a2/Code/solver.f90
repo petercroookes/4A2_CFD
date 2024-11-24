@@ -90,6 +90,10 @@
 !     program, you should aim to program anything inside this loop to operate as
 !     efficiently as you can.
 
+      ! Initialise the corrections to be 0 before timestepping
+      g%corr_ro = 0.0; g%corr_roe = 0.0
+      g%corr_rovx = 0.0; g%corr_rovy = 0.0
+      
       ! Runge-Kutta implementation with nrkuts = 4
       nrkuts = 4
       do nstep = 1, av%nsteps

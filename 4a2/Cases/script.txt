@@ -1,8 +1,0 @@
-cd ../Code
-make clean
-make
-cd ../Cases
-/homes/pc693/4A2/4a2/Code/solver.x < input_bump.txt > log_bump.txt
-time ../Code/solver.x < input_bump.txt
-python ../Code/plot_conv.py bump
-python ../Code/plot_contours.py bump

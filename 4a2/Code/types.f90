@@ -94,6 +94,9 @@
 !         Logical array to store wall locations for the nodes
           logical, dimension(:,:), allocatable :: wall
 
+!         Variables used to apply deferred correction for improved spatial accuracy
+          real, dimension(:,:), allocatable :: corr_ro, corr_roe, corr_rovx, corr_rovy
+          
       end type t_grid
 
       end module types
