@@ -104,8 +104,24 @@
             av%dt = av%dt_total / (1 + nrkuts - nrkut)
             call set_secondary(av,g)
             call apply_bconds(av,g,bcs)
-            call euler_iteration(av,g)
+            call euler_iteration(av,g)            
          end do
+!        Write out summary every "nconv" steps and update "davg" and "dmax" 
+         if(mod(av%nstep,nconv) == 0) then
+            call check_conv(av,g,d_avg,d_max)
+         end if
+
+!        Check the solution hasn't diverged or a stop has been requested 
+!        every "ncheck" steps
+         if(mod(av%nstep,ncheck) == 0) then
+            call check_stop(av,g)
+         end if
+
+!        Stop marching if converged to the desired tolerance "conlim"
+         if(d_max < av%d_max .and. d_avg < av%d_avg) then
+            write(6,*) 'Calculation converged in', nstep,'iterations'
+            exit
+         end if
       end do
 
       
